@@ -14,7 +14,7 @@ class StroyPipeline(object):
         
         dbargs = dict(
             host = '127.0.0.1' ,
-            db = 'newboy',
+            db = 'cms',
             user = 'root', #replace with you user name
             passwd = '123456', # replace with you password
             charset = 'utf8',
@@ -36,4 +36,4 @@ class StroyPipeline(object):
         return item
 
     def insert_into_table(self,conn,item):
-             conn.execute('insert into nb_story(title,content) values(%s,%s)', (item['title'],item['content']))
+             conn.execute('insert into articles(subject,content,link,cid,addtime,aid) values(%s,%s,%s,%s,%s,%s)', (item['title'],item['content'],item['link'],item['cid'],item['addtime'],item['aid']))

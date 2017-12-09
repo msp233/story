@@ -14,3 +14,6 @@ class StroyItem(scrapy.Item):
     title = scrapy.Field()
     link  = scrapy.Field()
     content = scrapy.Field()
+    cid = scrapy.Field()
+    addtime = scrapy.Field()
+    aid = scrapy.Field()
